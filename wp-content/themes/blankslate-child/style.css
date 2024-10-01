@@ -1,0 +1,289 @@
+/*
+Theme Name: BlankSlate Child
+Theme URI: https://opencollective.com/blankslate
+Template: blankslate
+Author: Bryan Hadaway
+Author URI: https://opencollective.com/blankslate#section-contributors
+Description: Donate: https://opencollective.com/blankslate. Learn: https://blankslate.me/. BlankSlate is the definitive WordPress boilerplate starter theme. I've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability, with no intrusive visual CSS styles added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/bhadaway/blankslate/issues. Thank you.
+Tags: accessibility-ready,one-column,two-columns,custom-menu,featured-images,microformats,sticky-post,threaded-comments,translation-ready
+Version: 2024.2.1723825310
+Updated: 2024-08-16 16:21:50
+
+*/
+ 
+.e-con-inner{
+    display:flex;
+    margin-top: 50px;
+}
+
+.elementor-19 .elementor-element.elementor-element-83f9a0c .elementor-heading-title {
+    color: #FFFFFF;
+    font-family: "Syne", Sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+  .elementor-19 .elementor-element.elementor-element-a2a9cde .elementor-heading-title {
+    color: #FFFFFF;
+    font-family: "Syne", Sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+/* ------------------------------ */
+/* MENU : Couleur des caractères  */
+/* ------------------------------ */
+.menu-item-41 a {
+    color:black;
+}
+.menu-item-40 a {
+    color:white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import de la font Roboto depuis Google Fonts et on l'applique sur tous les éléments de la page */
+body * {
+   font-family: 'Syne', sans-serif;
+}
+/* On applique un gris plus clair sur les paragraphes */
+p {
+   color: #313332;
+}
+/* La classe 'hover-effect' permettra de créer un effet de zoom quand l'on passera la souris par dessus les elements images enfants  */
+.hover-effect img {
+   transition: all 0.33s ease-in-out;
+   transform: scale(1) translateY(0px);
+}
+.hover-effect img:hover {
+   transition: all 0.33s ease-in-out;
+   transform: scale(1.05) translateY(-10px);
+}
+
+:root {
+   --btn-cmd : #DC9F96;
+   --btn-cmd-hover: #C02E44;
+}
+
+/* ------------------------------------- */
+/* HEADER */
+/* ------------------------------------- */
+header {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1920px;
+   width: 100%;
+   height: 80px;
+   padding: 0;
+   margin: 0;
+   background: white;
+}
+header ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+}
+header li {
+   width: 33%;
+   max-width: 236px;
+}
+header nav {
+   width: 40%;
+}
+header #menu li {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 236px;
+   height: 80px;
+   background: white;
+   color: black;
+   font-size: 16px;
+   font-weight: 400;
+   text-decoration: none;
+}
+header #menu li:hover {
+   font-size: 13px;
+   font-weight: 700;
+   line-height: 15.6px;
+   text-align: left;
+}
+.menu li:last-of-type{
+   background-color: #DC9F96;
+}
+header #menu .btn_commander a {
+   background: var(--color-pink);
+   font-size: 16px;
+   font-weight: 400;
+   font-family: Syne;
+}
+header #menu .btn_commander a:hover {
+   background: var(--color-red);
+}
+
+/* MENU ADMIN */
+/* re-tri du menu avec l'insertion du menu Admin */
+.menu li{
+   order:3;
+}
+.menu a{
+   color:black;
+}
+.menu .menu_admin{
+   order:2;
+}
+.menu li:first-child{
+   order:1;
+}
+.menu #menu-item-40{
+   background-color: #DC9F96;
+}
+/* ------------------------------------- */
+/* LOGO */
+/* ------------------------------------- */
+.logo {
+   display: flex;
+   flex-direction: column;
+   margin-left: 37px;
+}
+
+/* ------------------------------------- */
+/* FOOTER */
+/* ------------------------------------- */
+footer a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 60px;
+   background: white;
+   max-width: 1920px;
+   width: 100%;
+   text-decoration: none;
+   color: black;
+}
+footer a:hover {
+   font-size: 13px;
+   font-weight: 700;
+   line-height: 15.6px;
+   text-align: left;
+}
+
+/* Reformattage du HEADER pour les mobiles */
+@media (max-width: 540px) {
+   header {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-content: center;
+         height: fit-content;
+   }
+   header nav {
+         width: 100%;
+   }
+   header #menu a {
+         height: 40px;
+         padding: 10px;
+   }
+   header ul {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+   }
+
+   /* Positionnement du bloc LIVRAISON pour les mobiles */ 
+   .uacf7-col-6:last-child {
+      padding-left: 16px;
+      margin-top: 40px;
+    }
+    /* postionnement Qtt pour mobile */
+    .uacf7-col-3 span {
+        margin-right: 35px;
+        margin-bottom: 5px;
+    }
+}
+
+/* --------------------------- */
+/* Nous Contacter : formulaire */
+.uacf7-form-90 label {
+    margin: 20px 0 20px 0;
+}
+.wpcf7-form-control-wrap input {
+    margin: 5px 0 0 0;
+}
+
+/* --------------------------- */
+/* COMMANDER : Qtt             */
+.uacf7-col-3{
+    display: flex;
+    justify-content: center;
+}
+.uacf7-col-3 span {
+    width: 55px;
+    display: block;
+}
+
+/* COMMANDER : Qtt suppression des flèches dans l'input (Firefox) */
+/* suppression des fleches plus et moins sur la saisie des quantités */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* COMMANDER : Qtt suppression des flèches dans l'input (Firefox) */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* COMMANDER : Qtt input de forme carré, texte centré */
+.fruit-qtt{
+    border-radius: 0 !important;
+    text-align: center; 
+} 
+
+/* Commander : Vos Informations - Livraison */
+.VosInformationsLivraison{
+    color: #FFFFFF;
+    font-family: "Syne", Sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-top: 0px;
+}
+
+/* COMMANDER : trait horizontal au dessus du formulaire de commande */
+.elementor-widget-container2{
+    margin : 40px 0 60px 0;
+    border-top: 1px solid white;
+}
+
+/* COMMANDER : trait vertical  */
+/* Espace avant et après le trait vertical */
+.uacf7-col-6:first-child{
+    border-right: 1px solid white;
+    padding-right: 15px;
+}
+.uacf7-form-90 label{
+    padding-top: 20px;
+}
+/* Centrage du bouton de commande */
+.bouton{
+    justify-content: center;
+    display: grid;
+}
+
+/* COMMANDER : Reformattage LIVRAISON pour les mobiles */
+@media (max-width: 540px) {
+    .uacf7-col-6:last-child{
+        padding-left: 15px;
+    }
+    .uacf7-col-3{
+        justify-content: flex-end;
+    }
+    /* Suppression du trait vertical  */
+    .uacf7-col-6:first-child{
+        border-right: 0 solid white;
+    }
+}
